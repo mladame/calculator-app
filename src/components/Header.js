@@ -1,9 +1,9 @@
 import React from "react";
-import Themes from './Themes'
+// import Themes from './Themes'
 
 export default function Header() {
     return (
-        <div className="headerBox">
+        <div className="header-box">
 
             <h1>calc</h1>
             <section>

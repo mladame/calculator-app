@@ -1,45 +1,34 @@
+/* -------GENERAL------- */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ---------------HEADER---------------- */
-.headerBox {
+/* --------DISPLAY-------- */
+.header-box {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+}
+
+/* --------DISPLAY-------- */
+.calc-display {
+  background-color: pink;
+  min-height: 50px;
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* ---------KEYPAD-------- */
+.calc-keypad {
+  width: 70%;
+  display: grid;
+  margin: auto;
+  grid-template-columns: [first] auto [line2] auto [line3] auto [line4] auto;
+  grid-row: [row1] 20% [row2] auto [row3] auto [row4] auto [row5] auto; 
+}
+
+.calc-keypad button {
+  width: 90%;
 
 }
