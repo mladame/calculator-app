@@ -14,21 +14,29 @@
 .calc-display {
   background-color: pink;
   min-height: 50px;
-  width: 70%;
+  width: 30rem;
   margin: 10px auto;
   text-align: center;
 }
 
 /* ---------KEYPAD-------- */
 .calc-keypad {
-  width: 70%;
+  width: 30rem;
   display: grid;
   margin: auto;
   grid-template-columns: [first] auto [line2] auto [line3] auto [line4] auto;
   grid-row: [row1] 20% [row2] auto [row3] auto [row4] auto [row5] auto; 
+  gap: 10px;
 }
 
 .calc-keypad button {
-  width: 90%;
+  width: 5rem;
+  height: 3rem;
+  margin: auto;
+  font-size: 1.5rem;
+}
 
+button .row-5 {
+  /* width: 10rem; */
+  flex-grow: 2;
 }

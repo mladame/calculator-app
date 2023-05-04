@@ -33,7 +33,7 @@ export default function Keypad() {
                 <button onClick={type(this)}>7</button>
                 <button onClick={type(this)}>8</button>
                 <button onClick={type(this)}>9</button>
-                <button onClick={type(this)}>del</button>
+                <button onClick={type(this)}>DEL</button>
                 <button onClick={type(this)}>4</button>
                 <button onClick={type(this)}>5</button>
                 <button onClick={type(this)}>6</button>
@@ -45,9 +45,9 @@ export default function Keypad() {
                 <button onClick={type(this)}>.</button>
                 <button onClick={type(this)}>0</button>
                 <button onClick={type(this)}>/</button>
-                <button onClick={type(this)}>*</button>
-                <button onClick={type(this)}>reset</button>
-                <button onClick={type(this)}>=</button>
+                <button onClick={type(this)}>x</button>
+                <button className="row-5" onClick={type(this)}>RESET</button>
+                <button className="row-5" onClick={type(this)}>=</button>
                 
             </div>
 
