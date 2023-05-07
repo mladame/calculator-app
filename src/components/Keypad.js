@@ -31,18 +31,6 @@ export default function Keypad() {
         }
     }
 
-
-    // const selectNumber = number => {
-    //     // console.log(number.target.value);
-    //     if (operator === '') {
-    //         setOperand1(operand1 + number.target.value)
-    //         setNumber(operand1 + number.target.value)
-    //     } else {
-    //         setOperand2(operand2 + number.target.value)
-    //         setNumber(operand2 + number.target.value)
-    //     }
-    // }
-
     const selectOperator = operator => {
         setOperator(operator)
         console.log(operator)
@@ -86,29 +74,31 @@ export default function Keypad() {
     return (
         <div>
 
-            <div className="calc-display">{number}</div>
+            <div className="calc-display br">{number}</div>
 
-            <div className="calc-keypad">
-                <button onClick={selectNumber} value="7">7</button>
-                <button onClick={selectNumber} value="8">8</button>
-                <button onClick={selectNumber} value="9">9</button>
-                <button onClick={selectNumber} value="delete">DEL</button>
-                <button onClick={selectNumber} value="4">4</button>
-                <button onClick={selectNumber} value="5">5</button>
-                <button onClick={selectNumber} value="6">6</button>
-                <button onClick={() => selectOperator('+')} value="+">+</button>
-                <button onClick={selectNumber} value="1">1</button>
-                <button onClick={selectNumber} value="2">2</button>
-                <button onClick={selectNumber} value="3">3</button>
-                <button onClick={() => selectOperator('-')} value="-">-</button>
-                <button onClick={selectNumber} value=".">.</button>
-                <button onClick={selectNumber} value="0">0</button>
-                <button onClick={() => selectOperator('/')} value="/">/</button>
-                <button onClick={() => selectOperator('*')} value="*">x</button>
-                <button className="row-5" onClick={clear} value="reset">RESET</button>
-                <button className="row-5" onClick={calculateResult} value="=">=</button>
+            <div className="calc-keypad br">
+                <button className="br" onClick={selectNumber} value="7">7</button>
+                <button className="br" onClick={selectNumber} value="8">8</button>
+                <button className="br" onClick={selectNumber} value="9">9</button>
+                <button className="br" onClick={selectNumber} value="delete">DEL</button>
+                <button className="br" onClick={selectNumber} value="4">4</button>
+                <button className="br" onClick={selectNumber} value="5">5</button>
+                <button className="br" onClick={selectNumber} value="6">6</button>
+                <button className="br" onClick={() => selectOperator('+')} value="+">+</button>
+                <button className="br" onClick={selectNumber} value="1">1</button>
+                <button className="br" onClick={selectNumber} value="2">2</button>
+                <button className="br" onClick={selectNumber} value="3">3</button>
+                <button className="br" onClick={() => selectOperator('-')} value="-">-</button>
+                <button className="br" onClick={selectNumber} value=".">.</button>
+                <button className="br" onClick={selectNumber} value="0">0</button>
+                <button className="br" onClick={() => selectOperator('/')} value="/">/</button>
+                <button className="br" onClick={() => selectOperator('*')} value="*">x</button>
             </div>
 
+                <div className="row-5">
+                    <button className="r5 br" onClick={clear} value="reset">RESET</button>
+                    <button className="r5 br" onClick={calculateResult} value="=">=</button>
+                </div>
         </div>
     )
 }

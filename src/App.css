@@ -14,18 +14,18 @@
 .calc-display {
   background-color: pink;
   min-height: 50px;
-  width: 30rem;
+  width: 25rem;
   margin: 10px auto;
   text-align: center;
 }
 
 /* ---------KEYPAD-------- */
 .calc-keypad {
-  width: 30rem;
+  width: 26rem;
   display: grid;
   margin: auto;
   grid-template-columns: [first] auto [line2] auto [line3] auto [line4] auto;
-  grid-row: [row1] 20% [row2] auto [row3] auto [row4] auto [row5] auto; 
+  grid-row: [row1] 20% [row2] auto [row3] auto [row4] auto; 
   gap: 10px;
 }
 
@@ -36,7 +36,21 @@
   font-size: 1.5rem;
 }
 
-button .row-5 {
-  /* width: 10rem; */
-  flex-grow: 2;
+.row-5 {
+  width: 26rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+  /* grid-template-columns: [first] 15rem [line2] 15rem; */
+  /* grid-row: auto; */
+  /* flex-grow: 2; */
+}
+
+.r5 {
+  width: 12rem;
+  height: 3rem;
+}
+
+.br {
+  border-radius: 10px;
 }
