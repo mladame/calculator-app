@@ -3,9 +3,9 @@ import React, { useState } from "react";
 export default function Keypad() {
 
     // useState for operands and operator
-    const [operand1, setOperand1] = useState('');
+    const [operand1, setOperand1] = useState(''); //prev
     const [operator, setOperator] = useState('');
-    const [operand2, setOperand2] = useState('');
+    const [operand2, setOperand2] = useState(''); //next
 
     // useState for each number
     const [number, setNumber] = useState('');
@@ -31,6 +31,7 @@ export default function Keypad() {
         }
     }
 
+
     // const selectNumber = number => {
     //     // console.log(number.target.value);
     //     if (operator === '') {
@@ -48,7 +49,7 @@ export default function Keypad() {
     }
 
     const calculateResult = () => {
-        const operand1Num = parseFloat(operand1)
+        const operand1Num = parseFloat(operand1) //prev
         const operand2Num = parseFloat(operand2)
 
         let result = ''
@@ -75,7 +76,7 @@ export default function Keypad() {
         setOperator('')
         setNumber(result.toString())
     }
-    const clear = operator => {
+    const clear = () => {
         setOperand1('');
         setOperator('');
         setOperand2('');
@@ -91,7 +92,7 @@ export default function Keypad() {
                 <button onClick={selectNumber} value="7">7</button>
                 <button onClick={selectNumber} value="8">8</button>
                 <button onClick={selectNumber} value="9">9</button>
-                <button onClick={() => setNumber('')} value="delete">DEL</button>
+                <button onClick={selectNumber} value="delete">DEL</button>
                 <button onClick={selectNumber} value="4">4</button>
                 <button onClick={selectNumber} value="5">5</button>
                 <button onClick={selectNumber} value="6">6</button>
