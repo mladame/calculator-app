@@ -11,23 +11,41 @@ export default function Keypad() {
     const [number, setNumber] = useState('');
 
     // onclick add number to sequence
-
     const selectNumber = number => {
-        if (operator === '') {
-            setOperand1(operand1 + number)
-            setNumber(operand1 + number)
+        if (number.target.value === 'delete') {
+            if (operator === '') {
+                setOperand1(operand1.slice(0, -1));
+                setNumber(operand1.slice(0, -1));
+            } else {
+                setOperand2(operand2.slice(0, -1));
+                setNumber(operand2.slice(0, -1));
+            }
         } else {
-            setOperand2(operand2 + number)
-            setNumber(operand2 + number)
+            if (operator === '') {
+                setOperand1(operand1 + number.target.value)
+                setNumber(operand1 + number.target.value)
+            } else {
+                setOperand2(operand2 + number.target.value)
+                setNumber(operand2 + number.target.value)
+            }
         }
     }
+
+    // const selectNumber = number => {
+    //     // console.log(number.target.value);
+    //     if (operator === '') {
+    //         setOperand1(operand1 + number.target.value)
+    //         setNumber(operand1 + number.target.value)
+    //     } else {
+    //         setOperand2(operand2 + number.target.value)
+    //         setNumber(operand2 + number.target.value)
+    //     }
+    // }
 
     const selectOperator = operator => {
         setOperator(operator)
         console.log(operator)
     }
-
-    
 
     const calculateResult = () => {
         const operand1Num = parseFloat(operand1)
