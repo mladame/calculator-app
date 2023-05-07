@@ -1,5 +1,6 @@
-import './App.css';
 import Header from './components/Header';
+import Keypad from './components/Keypad';
+import './App.css';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <div className='app-container'>
         <Header />
         {/* display + keypad */}
+        <Keypad/>
       </div>
 
     </div>
@@ -15,3 +17,4 @@ function App() {
 }
 
 export default App;
+ 
